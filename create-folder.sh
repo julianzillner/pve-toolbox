@@ -1,12 +1,12 @@
-read -p "Enter Directory Name: " dirname
+read -p "Verzeichnisnamen eingeben:" dirname
 if [[ ! -d "$dirname" ]]
 then
         if [[ ! -L $dirname ]]
         then
-                echo "Directory doesn't exist. Creating now"
+                echo "Verzeichnis existiert nicht. Jetzt erstellen"
                 mkdir $dirname
-                echo "Directory created"
+                echo "Ordner wird erstellt"
         else
-                echo "Directory exists"
+                echo "Ordner existiert bereits"
         fi
 fi
